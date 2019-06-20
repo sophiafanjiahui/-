@@ -1,0 +1,318 @@
+
+*[class*="fontawesome-"]:before {                      /** {xxx}表示所有元素都引用此卷标样式*/
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 18px;
+}
+/*
+body {
+    background: #f9f9f9;
+    color: #0e171c;
+    font: 300 100%/1.5em 'Lato', sans-serif;
+    margin: 0;
+}
+*/
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 20px;
+    margin: 4px 0;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 15px 0;
+    display: inline;
+}
+h4{
+    display: inline;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.calendar-container {
+    width: 90%;
+	margin:20px auto 0 auto;
+}
+
+.calendar {
+    text-align: left;
+}
+
+.calendar header {
+    position: relative;
+    text-align: center;
+    margin: 15px;
+}
+
+.calendar h2 {
+    text-transform: uppercase;
+}
+
+.calendar thead {
+    font-weight: 600;
+    color: #7c8a95;
+}
+
+.calendar tbody {
+    color: #7c8a95;
+}
+
+.calendar tbody td span:hover {
+    border: 2px solid #286ac0;
+}
+
+.calendar tbody td span.active {
+    border: 2px solid #286ac0;
+}
+
+.calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 45px;
+    line-height: 30px;
+    text-align: center;
+    width: 14.28571428571429%;
+}
+.calendar td span{
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+}
+
+.current-day {       /*  当日样式*/
+    background: #286ac0;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+.event {
+    cursor: pointer;
+    text-align: center;
+}
+/***************************当前日期有event的样式************************/
+.event:after {
+    background: #286ac0;
+    border-radius: 50%;
+    color: #f9f9f9;
+    cursor: pointer;
+    bottom: 2px;
+    display: block;
+    content: '';
+    height: 5px;
+    margin-left: 45%;
+    text-align: center;
+    width: 5px;
+}
+/***************************当前日期有event的样式************************/
+.event.current-day:after {
+    background: #f9f9f9;
+}
+/**********************向前向后翻页******************/
+/*
+.btn-prev,
+ .btn-next {
+     border: 2px solid #cbd1d2;
+     border-radius: 50%;
+     color: #cbd1d2;
+     height: 30px;
+     font-size: 14px;
+     line-height: 30px;
+     margin: -16px;
+     position: absolute;
+     top: 50%;
+     width: 30px;
+ }*/
+
+ .btn-left,
+  .btn-right {
+      color: #000;
+      height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      margin: -16px;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+  }
+
+.icon-blue {
+    border: 4px solid #286ac0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    text-align: center;
+    width: 15px;
+    margin-left: 12px;
+
+    margin-bottom: -2px;
+}
+/**********************向前向后翻页******************/
+
+.btn-prev:hover,
+.btn-next:hover {
+    background: #cbd1d2;
+    color: #f9f9f9;
+}
+.btn-left {
+    left: 0px;
+}
+
+.btn-right {
+    right: 0px;
+}
+/*
+.btn-prev {
+    left: 30px;
+}
+
+.btn-next {
+    right: 35px;
+}
+*/
+.list {
+
+}
+/*
+.close {
+    color: #A4AAAB;
+    margin-top: -15px;
+    margin-right: 10px;
+    float: right;
+}*/
+  /************************有event的类的样式，下面内容的样式********************************/
+.day-event {
+    background-color: #fff ;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    display:none;
+
+
+}
+.day-event p{
+    margin-left: 90px;
+    color: #7c8a95;
+    font-size: 8px;
+;
+
+}
+.content{
+    margin-top: 8px;
+    margin-left: 90px;
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+.day-event span{
+    font-size: 12px;
+}
+
+.day-event button {
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #286ac0;
+    border: 0;
+    border-bottom: 2px solid #286ac0;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #286ac0;
+    box-shadow: inset 0 -2px #286ac0;
+}
+/************************有event的类的样式，下面内容的样式********************************/
+/*.check-btn {
+    width: 100%;
+}*/
+input[type=checkbox] {display:none;}
+/******
+span {
+    background-color:#373740;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    font-weight:700;
+    color:#FFF;
+    font-size:.85em;
+    letter-spacing:2px;
+    text-decoration:none;
+    font-family:'PT Sans', sans-serif;
+    text-align:center;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    cursor:pointer;
+    display:block;
+    margin: 0 auto;
+    -webkit-transition:background-color 150ms ease-in;
+    -moz-transition:background-color 150ms ease-in;
+    -ms-transition:background-color 150ms ease-in;
+    -o-transition:background-color 150ms ease-in;
+    transition:background-color 150ms ease-in;
+}
+
+span:hover {
+    background-color:#c0392b;
+}
+******/
+input[type=checkbox]:checked + span {
+    background-color:#9C2E23;
+    text-decoration:none;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background:#9C2E23 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
+    background-size:15px 13px;
+}
+
+input[type=checkbox]:checked:hover + span {
+    background-color:#9C2E23;
+    color:rgba(255,255,255,0.5);
+    text-decoration:none;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background:#9C2E23 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
+    background-size:15px 15px;
+}
+.agent{
+    margin-top: 20px;
+}
+.agent h4{
+    margin-left: 12px;
+
+}
+
+a.right_bottom{
+    background: #1a59b7;
+    color:#ffffff;
+    overflow: hidden;
+    z-index: 9999;
+    position: fixed;
+    padding-top:9px;
+    text-align:center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+}
